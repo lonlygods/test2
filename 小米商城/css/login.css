@@ -1,0 +1,152 @@
+/* logo */
+.logo{
+	width: 200px;
+	height: 98px;
+	margin-left: 12%;
+}
+/* mid */
+.mid{
+	width: 100%;
+	height: 588px;
+	position: absolute;
+	left: 0;
+	top: 98px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	display: block;
+}
+.mid div {
+}
+.big{
+	width: 100%;
+	height: 588px;
+	background-image: url(../img/login_big.jpg);
+	background-position: top center;
+}
+
+
+.login{
+	width: 410px;
+	height: 556px;
+	background: white;
+	position: relative;
+	float: right;
+	margin:  2.1% 14% 0 0;
+	text-align: center;
+}
+.login div{
+	display: inline-block;
+	padding:10px;
+}
+.zhdl{
+	text-align: center;
+	font-size: 24px;
+	color: #666;
+	cursor: pointer;
+}
+.smdl{
+	text-align: center;
+	font-size: 24px;
+	color: #666;
+	cursor: pointer;
+}
+.zhdl :hover{
+	color: #f56600;
+}
+.smdl :hover{
+	color: #f56600;
+}
+
+.userword {
+	position: relative;
+	margin-top: -10%;
+}
+.userword input{
+	width: 306px;
+	height: 22px;
+	line-height: 22px;
+	padding: 13px 16px 13px 14px;
+	display: block;
+	color: #4a4a4a;
+	margin-top: 5%;
+}
+
+.login_dl button{
+	background-color: #ff6700;
+	width: 340px;
+	height: 50px;
+	/* line-height: 50px; */
+	display: block;
+	/* margin-bottom: 14px; */
+	text-align: center;
+	font-size: 14px;
+}
+/* 验证码 */
+#code_input{
+	width: 200px;
+	height: 25px;
+	position: relative;
+	margin: 0 0 0 -10px;
+	top: -12px;
+}
+#v_container{
+	width: 100px;
+	height: 12px;
+	/* margin-top: 5px; */
+}
+
+.phone {
+	margin-top: -50px;
+}
+.phone p {
+	font-size: 14px;
+	/* margin: -5% 0 0 0; */
+	color: #ff6700;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 55px;
+}
+.phone div {
+	font-size: 14px;
+	color: #999;
+	float:right;
+	display: inline-block;
+	margin-top: 4px;
+	padding-left: 20px;
+}
+
+.qtdl p{
+	color: #bbb;
+	font-size: 14px;
+}
+.qtdl img{
+	width: 220px;
+	height: 35px;
+	cursor: pointer;
+}
+
+
+.ewm{
+	margin-top: 20%;
+}
+.ermsize p{
+	font-size: 14px;
+	color: #757575;
+	display: inline-block;
+}
+.ermsize div{
+	font-size: 14px;
+	color: #757575;
+}
+
+.sm{
+	    opacity: 0;
+}
+
+
+.weibu {
+	font-size: 14px;
+	    color: #757575;
+		text-align: center;
+	margin-top: 45%;
+}

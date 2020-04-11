@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>滑动轮播</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	</head>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		span{
+			width: 20px;
+			height: 20px;
+			background-color: #B2B2B2;
+			margin-left: 20px;
+			color: white;
+			display: inline-block;
+			padding: 5px;
+			text-align: center;
+		}
+		ul{
+			width: 2000px;
+			height: 240px;
+		}
+		li{
+			background-color: #B2B2B2;
+			text-align: center;
+			width: 200px;
+			margin-left: 20px;
+			border-top: 2px red solid;
+			padding: 40px 0 40px 0;
+			float: left;
+			list-style-type: none;
+		}
+		li > div{
+			margin-bottom: 20px;
+			margin-top: 20px;
+		}
+		img{
+			width: 40%;
+		}
+		.mydiv{
+			color: white;
+			width: 900px;
+			height: 220px;
+			margin: auto;
+			padding: 0px 0 20px 0;
+			overflow: hidden;
+		}
+	</style>
+	<body>
+		<div class=""style="margin: 20px 0 20px 1050px;">
+			<span id="">
+				<i class="fa fa-angle-left"></i>
+			</span>
+			<span id="">
+				<i class="fa fa-angle-right"></i>
+			</span>
+		</div>
+		<div class="mydiv">
+			<ul>
+			</ul>
+		</div>
+	</body>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		(function() {
+			var att= [];
+			var arr = [];
+			var aaa = [];
+			$.ajax({
+				type: "POST",
+				url: "https://dawn.changxvan.top/api/ ",
+				data: {
+					'data': 'data'
+				},
+				dataType: 'json',
+				success: function(data) {
+					var pic = data.brand;
+				console.log(pic);
+				pic.forEach(function(val) {
+					att.push(val.id);
+					arr.push(val.name);
+					aaa.push(val.photo);
+				})
+				console.log(att);
+				console.log(arr);
+				console.log(aaa);
+				for (var i = 0; i<aaa.length; i++) {
+					var myul = document.querySelector('ul');
+					var myli = document.createElement('li');
+					var myimg = document.createElement('img');
+					var mydiv = document.createElement('div');
+					var myp = document.createElement('p');
+					myul.appendChild(myli);
+					myli.appendChild(myimg);
+					myli.appendChild(mydiv);
+					myli.appendChild(myp);
+					myimg.src=aaa[i];
+					mydiv.innerText=att[i];
+					myp.innerText=arr[i];
+				}
+				}
+			});
+			$('span').click(function(){
+				if($(this).index() == 0){
+					$('ul').css({'margin-left':'0px','transition':'0.5s'})
+				}else{
+					$('ul').css({'margin-left':'-880px','transition':'0.5s'})
+				}
+			})
+		})();
+	</script>
+</html>
